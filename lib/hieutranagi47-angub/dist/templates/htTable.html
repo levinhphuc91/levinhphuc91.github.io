@@ -1,0 +1,13 @@
+<h3>{{options.title}}</h3>
+<table class="ht-table">
+  <thead>
+  <th ng-repeat="c in options.header.columnName">{{c}}</th>
+  </thead>
+  <tbody>
+    <tr ng-repeat="d in data">
+      <td>{{d.fullName}}</td>
+      <td>{{d.age}}</td>
+      <td>{{d.gender}}</td>
+    </tr>
+  </tbody>
+</table>
