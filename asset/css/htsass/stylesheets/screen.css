@@ -5,6 +5,7 @@
 /* line 1, ../sass/pages/_product.scss */
 .product {
   margin-top: 2%;
+  height: 348px;
 }
 
 .product-detail-custom {
@@ -44,7 +45,7 @@
   /* line 17, ../sass/pages/_product.scss */
   .product .product-card img {
     max-height: 200px;
-  }  
+  }
 }
 /* line 27, ../sass/pages/_product.scss */
 .product .product-card p {

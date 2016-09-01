@@ -28,6 +28,7 @@ angular.module('app').controller('HomeController', function($scope, dataService,
 
   $scope.reverse = true;
   $scope.displayImg = "";
+  $scope.formatSize = 'col-md-3';
   $scope.replaceMainImgBy = function(image){
     $scope.displayImg = image;
   }
@@ -45,5 +46,8 @@ angular.module('app').controller('HomeController', function($scope, dataService,
   $scope.leaveHover = function(product) {
     product.isHover = false;
     $scope.displayImg = "";
+  }
+  $scope.changeSize = function(size) {
+    $scope.formatSize = size;
   }
 })
