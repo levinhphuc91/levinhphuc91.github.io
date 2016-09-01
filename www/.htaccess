@@ -1,0 +1,8 @@
+RewriteEngine On
+# The following rule tells Apache that if the requested filename
+# exists, simply serve it.
+RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -f [OR]
+RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -D
+RewriteRule ^ - [L]
+
+RewriteRule ^ /index.html

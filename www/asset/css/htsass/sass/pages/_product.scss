@@ -1,0 +1,119 @@
+.product{
+	margin-top: 2%;
+
+	.product-card {
+		display: table;
+	    padding: 1%;
+	    line-height: 120%;
+	    label{
+	    	font-weight: 600;
+	    	display: block;
+	    	line-height: 161%;
+	    }
+	    .name{
+    		padding: 0.36em 0 0.61em 0;
+    		font-size: 110%;
+    	}
+	    img{
+	    	max-width: 100%;
+	    	@media screen and (min-width: 768px) {
+				max-height: 200px;
+	    	}
+	    	margin-bottom: 1em;
+	    	text-align:center;
+	        vertical-align:middle;
+	        display:table-cell;
+	    }
+	    p{
+	    	margin-top: 0.5em;
+	    }
+	    i{color: #b3b3b3;}
+	    .md-btn-icon{
+	    	padding: 4px 7px 1px 7px;
+	    }
+	    .flip-180{
+	    	/* Safari */
+			-webkit-transform: rotateY(-180deg);
+			/* Firefox */
+			-moz-transform: rotateY(-180deg);
+			/* IE */
+			-ms-transform: rotateY(-180deg);
+			/* Opera */
+			-o-transform: rotateY(-180deg);
+			/* Internet Explorer */
+			filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=6);
+	    }
+	}
+}
+.grey-background{
+	background-color: #eee;
+	height: 24px;
+	padding: 0;
+}
+.purple-color{
+	color: #AB558A;
+}
+.product-detail{
+	.image{
+		float: left;
+		width: 100%;
+		img{
+			width: 100%;
+			top: -23vw;
+			padding-bottom: -23vw;
+		}
+		
+	}
+	.thumb-image{
+		z-index: 1;
+		float: left;
+		top: 0;
+		margin-left: -100%;
+		width: 12%;
+		height: auto;
+		background-color: transparent;
+		img{
+			width: 100%;
+			margin-top:1vw;
+		}
+	}
+}
+.mdf-panel-footer{
+	background-color: #838383;
+	color: white;
+	padding-bottom: 2em;
+}
+.mdf-center {
+     float: none;
+     margin-left: auto;
+     margin-right: auto;
+}
+.product-info{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    .center-block{
+    	span{
+    		font-size: 130%;
+    		color: #b3b3b3;
+    		display: block;
+		    width: 100%;
+		    text-align: center;
+    	}
+    	h3, p{
+    		margin: 0;
+    		display: block;
+		    width: 100%;
+		    text-align: center;
+    	}
+    }
+}
+
+@media screen and (max-width: 767px) {
+	#sort{
+		position: absolute;
+		margin-left: 61px;
+		top: 0;
+		width: auto;
+	}
+}

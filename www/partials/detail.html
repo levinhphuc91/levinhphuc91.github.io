@@ -1,0 +1,29 @@
+<div class="panel panel-default">
+  <div class="panel-body">
+  	<div class="product-detail">
+  		
+	    <div class="image"  data-ng-click="showed = !showed" data-ng-mouseover="showed = true" data-ng-mouseleave="showed = false">
+	    	<img style="width: 100%" src="{{displayImg?displayImg:data.images[0].url}}" err-src>
+	    </div>
+	    
+      <div class="thumb-image" ng-show="showed" ng-mouseover="showed = true">
+	    	<img ng-show="data.images[0].url" data-ng-click="replaceMainImgBy(data.images[0].url)" src="{{data.images[0].url}}"  err-src>
+	    	<img ng-show="data.images[1].url" data-ng-click="replaceMainImgBy(data.images[1].url)" src="{{data.images[1].url}}"  err-src>
+	    </div>
+
+  	</div>
+  	
+  </div>
+  <div class="panel-footer mdf-panel-footer text-center text-uppercase">
+    <label class="font-large-14">AVAILABLE SIZE</label>
+    <p class="font-large-11">{{data.sizes.join(", ") || data.size.join(", ")}}</P>
+  </div>
+</div>
+<div class="product-info">
+  <div class="center-block">
+    <uib-rating class="mdf-center" ng-model="rate" max="5" read-only="isReadonly" on-hover="hoveringOver(value)" on-leave="saveRate(product.id, rate)" titles="['1','2','3','4','5']" aria-labelledby="default-rating"></uib-rating>
+    <h3>{{data.title}}</h3>
+    <p>{{data.price | currency:"SEK ":2}} kr</p>
+    <span><small>RESORT</small></span>
+  </div>
+</div>

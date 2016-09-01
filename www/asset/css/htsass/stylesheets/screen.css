@@ -1,0 +1,255 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 1, ../sass/pages/_product.scss */
+.product {
+  margin-top: 2%;
+}
+
+.product-detail-custom {
+  position: absolute;
+  top: 0px;
+  width: 300px;
+  z-index: 9999;
+  left: -10%;
+
+}
+/* line 4, ../sass/pages/_product.scss */
+.product .product-card {
+  display: table;
+  padding: 1%;
+  line-height: 120%;
+}
+/* line 8, ../sass/pages/_product.scss */
+.product .product-card label {
+  font-weight: 600;
+  display: block;
+  line-height: 161%;
+}
+/* line 13, ../sass/pages/_product.scss */
+.product .product-card .name {
+  padding: 0.36em 0 0.61em 0;
+  font-size: 110%;
+}
+/* line 17, ../sass/pages/_product.scss */
+.product .product-card img {
+  max-width: 100%;
+  margin-bottom: 1em;
+  text-align: center;
+  vertical-align: middle;
+  display: table-cell;
+}
+@media screen and (min-width: 768px) {
+  /* line 17, ../sass/pages/_product.scss */
+  .product .product-card img {
+    max-height: 200px;
+  }  
+}
+/* line 27, ../sass/pages/_product.scss */
+.product .product-card p {
+  margin-top: 0.5em;
+}
+/* line 30, ../sass/pages/_product.scss */
+.product .product-card i {
+  color: #b3b3b3;
+}
+/* line 31, ../sass/pages/_product.scss */
+.product .product-card .md-btn-icon {
+  padding: 4px 7px 1px 7px;
+}
+/* line 34, ../sass/pages/_product.scss */
+.product .product-card .flip-180 {
+  /* Safari */
+  -webkit-transform: rotateY(-180deg);
+  /* Firefox */
+  -moz-transform: rotateY(-180deg);
+  /* IE */
+  -ms-transform: rotateY(-180deg);
+  /* Opera */
+  -o-transform: rotateY(-180deg);
+  /* Internet Explorer */
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=6);
+}
+
+/* line 48, ../sass/pages/_product.scss */
+.grey-background {
+  background-color: #eee;
+  height: 24px;
+  padding: 0;
+}
+
+/* line 53, ../sass/pages/_product.scss */
+.purple-color {
+  color: #AB558A;
+}
+
+/* line 57, ../sass/pages/_product.scss */
+.product-detail .image {
+  float: left;
+  width: 100%;
+}
+/* line 60, ../sass/pages/_product.scss */
+.product-detail .image img {
+  width: 100%;
+  top: -23vw;
+  padding-bottom: -23vw;
+}
+/* line 67, ../sass/pages/_product.scss */
+.product-detail .thumb-image {
+  z-index: 1;
+  float: left;
+  top: 0;
+  margin-left: -100%;
+  width: 12%;
+  height: auto;
+  background-color: transparent;
+}
+/* line 75, ../sass/pages/_product.scss */
+.product-detail .thumb-image img {
+  width: 100%;
+  margin-top: 1vw;
+}
+
+/* line 81, ../sass/pages/_product.scss */
+.mdf-panel-footer {
+  background-color: #838383;
+  color: white;
+  padding-bottom: 2em;
+}
+
+/* line 86, ../sass/pages/_product.scss */
+.mdf-center {
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 91, ../sass/pages/_product.scss */
+.product-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* line 96, ../sass/pages/_product.scss */
+.product-info .center-block span {
+  font-size: 130%;
+  color: #b3b3b3;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+/* line 103, ../sass/pages/_product.scss */
+.product-info .center-block h3, .product-info .center-block p {
+  margin: 0;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+  /* line 113, ../sass/pages/_product.scss */
+  #sort {
+    position: absolute;
+    margin-left: 61px;
+    top: 0;
+    width: auto;
+  }
+  .product-detail-custom {
+    display: none;
+  }
+}
+/* line 8, ../sass/screen.scss */
+.voffset {
+  margin-top: 2px;
+}
+
+/* line 9, ../sass/screen.scss */
+.voffset1 {
+  margin-top: 5px;
+}
+
+/* line 10, ../sass/screen.scss */
+.voffset2 {
+  margin-top: 10px;
+}
+
+/* line 11, ../sass/screen.scss */
+.voffset3 {
+  margin-top: 15px;
+}
+
+/* line 12, ../sass/screen.scss */
+.voffset4 {
+  margin-top: 30px;
+}
+
+/* line 13, ../sass/screen.scss */
+.voffset5 {
+  margin-top: 40px;
+}
+
+/* line 14, ../sass/screen.scss */
+.voffset6 {
+  margin-top: 60px;
+}
+
+/* line 15, ../sass/screen.scss */
+.voffset7 {
+  margin-top: 80px;
+}
+
+/* line 16, ../sass/screen.scss */
+.voffset8 {
+  margin-top: 100px;
+}
+
+/* line 17, ../sass/screen.scss */
+.voffset9 {
+  margin-top: 150px;
+}
+
+/* line 18, ../sass/screen.scss */
+.font-large-11 {
+  font-size: 110%;
+}
+
+/* line 19, ../sass/screen.scss */
+.font-large-12 {
+  font-size: 120%;
+}
+
+/* line 20, ../sass/screen.scss */
+.font-large-13 {
+  font-size: 130%;
+}
+
+/* line 21, ../sass/screen.scss */
+.font-large-14 {
+  font-size: 140%;
+}
+
+/* line 22, ../sass/screen.scss */
+.font-large-15 {
+  font-size: 150%;
+}
+
+/* line 23, ../sass/screen.scss */
+.font-large-16 {
+  font-size: 160%;
+}
+
+/* line 24, ../sass/screen.scss */
+.font-large-17 {
+  font-size: 170%;
+}
+
+/* line 25, ../sass/screen.scss */
+.font-large-18 {
+  font-size: 180%;
+}
+
+/* line 26, ../sass/screen.scss */
+.font-large-19 {
+  font-size: 190%;
+}

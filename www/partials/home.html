@@ -1,0 +1,55 @@
+<div class="row">
+  <div class="col-sx-4 col-sm-4 col-md-3 col-lg-3 form-inline">
+    <div class="form-group">
+      <label for="sort">Sorting: </label>
+      <select id="sort" class="form-control grey-background" ng-model="sort" data-ng-change="setSortedBy(sort); setReverse(sort)">
+        <option value="" hidden selected disabled>Select a sort type</option>
+        <option data-ng-value="$index" data-ng-repeat="value in sortBy">{{value.label}}</option>
+      </select>
+    </div>
+  </div>
+  <div class="col-sx-8 col-sm-8 col-md-9 col-lg-9 hidden-xs form-inline">
+    <div class="form-inline pull-right ">
+      <small>Image size</small>
+      <i class="fa fa-th purple-color font-large-12" aria-hidden="true"></i>
+      <i class="fa fa-th-large gray-light font-large-12" aria-hidden="true"></i>
+    </div>
+
+  </div>
+</div>
+<div class="row">
+  <div class="col-sx-4 col-sm-4 col-md-3 col.lg-3 product" data-ng-repeat="product in data | orderBy: sortedBy : reverse">
+    <div class="product-card">
+      <a href="detail.html?id={{product.id}}" ng-mouseover="hover(product)">
+        <img data-ng-src="{{product.images[0].url}}">
+      </a>
+      <div class="panel panel-default product-detail-custom" ng-if='product.isHover' data-ng-mouseleave="leaveHover(product)">
+      <!-- <div class="panel panel-default product-detail-custom" ng-if='product.isHover'> -->
+      	<div class="product-detail">
+
+    	    <div class="image">
+    	    	<img style="width: 100%; max-height:235px;" data-ng-src="{{displayImg?displayImg:product.images[0].url}}" err-src>
+    	    </div>
+
+          <div class="thumb-image">
+    	    	<img ng-show="product.images[0].url" data-ng-click="replaceMainImgBy(product.images[0].url)" data-ng-src="{{product.images[0].url}}"  err-src>
+    	    	<img ng-show="product.images[1].url" data-ng-click="replaceMainImgBy(product.images[1].url)" data-ng-src="{{product.images[1].url}}"  err-src>
+    	    </div>
+
+      	</div>
+        <div class="panel-footer mdf-panel-footer text-center text-uppercase">
+          <label class="font-large-14">AVAILABLE SIZE</label>
+          <p class="font-large-11">{{product.sizes.join(", ") || product.size.join(", ")}}</P>
+        </div>
+      </div>
+      <label class="name">{{product.title}}</label>
+      <label>{{product.price | currency:"SEK ":2}} kr</label>
+      <uib-rating ng-model="rate" max="5" read-only="isReadonly" on-hover="hoveringOver(value)" on-leave="saveRate(product.id, rate)" titles="['1','2','3','4','5']" aria-labelledby="default-rating"></uib-rating> ({{rate || 0}})
+      <p>
+        <span class="btn btn-default md-btn-icon"><i class="fa fa-heart" aria-hidden="true"></i></span>
+        <span class="btn btn-default md-btn-icon"><i class="fa fa-files-o" aria-hidden="true"></i></span>
+      </p>
+    </div>
+
+  </div>
+</div>
